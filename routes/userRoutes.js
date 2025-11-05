@@ -10,5 +10,4 @@ userRouter.post('/toggle-like-creation', auth, toggleLikeCreation);
 
 export default userRouter;
 
-//5:20 tak hogya -03 nov
 
