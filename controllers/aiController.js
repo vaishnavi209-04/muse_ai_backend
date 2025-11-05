@@ -28,7 +28,7 @@ export const generateArticle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: length,
@@ -67,7 +67,7 @@ export const generateBlogTitle = async (req, res) => {
     }
 
     const response = await AI.chat.completions.create({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 100,
@@ -222,7 +222,7 @@ export const resumeReview = async (req, res) => {
     }
 
     const pdfParse = (await import("pdf-parse")).default;
-    
+
     const dataBuffer = fs.readFileSync(resume.path);
     const pdfData = await pdfParse(dataBuffer);
 
