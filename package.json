@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "migrate": "node migrations/run_migration.js"
   },
   "keywords": [],
   "author": "",
