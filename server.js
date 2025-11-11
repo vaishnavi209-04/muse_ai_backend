@@ -12,7 +12,10 @@ app.use(clerkMiddleware())
 
 await connectCloudinary();
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://muse-ai.vercel.app", "http://localhost:3000"],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => res.send("Server is running"));
@@ -24,6 +27,4 @@ app.use('/api/user', userRouter);
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);   
-});
+export default app;
