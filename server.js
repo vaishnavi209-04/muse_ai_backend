@@ -12,10 +12,7 @@ app.use(clerkMiddleware())
 
 await connectCloudinary();
 
-app.use(cors({
-  origin: ["https://muse-ai.vercel.app", "http://localhost:3000"],
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => res.send("Server is running"));
