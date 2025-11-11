@@ -7,12 +7,15 @@ import userRouter from "./routes/userRoutes.js";
 import { clerkMiddleware, requireAuth } from '@clerk/express'
 
 const app = express();
+app.use(cors({
+  origin: ["https://muse-ai-web.vercel.app", "http://localhost:5173"],
+  credentials: true,
+}));
 
 app.use(clerkMiddleware())
 
 await connectCloudinary();
 
-app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => res.send("Server is running"));
@@ -24,4 +27,6 @@ app.use('/api/user', userRouter);
 
 const PORT = process.env.PORT || 3000;
 
-export default app;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);   
+});
