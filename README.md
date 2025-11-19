@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./src/assets/logo.svg" width="100%" alt="Muse.ai Banner Image" />
+  <img src="../frontend/src/assets/logo.svg" width="100%" alt="Muse.ai Banner Image" />
 
   <p><i>Let Ai be your muse</i></p>
 <p align="center">
@@ -44,10 +44,10 @@ Muse.ai is logically split into two service layers. This document serves as the 
 
 <div align="center">
 ### 🧬 **System Architecture Overview**
-<img src="./src/assets//design.png" alt="High-level System Architecture Diagram" width="85%" />
+<img src="../frontend/src/assets//design.png" alt="High-level System Architecture Diagram" width="85%" />
 
 ### 🧬 **Detailed System Design Diagram**
-<img src="./src/assets/highLevelDesign.png" alt="Detailed Component Interaction Diagram" width="85%" />
+<img src="../frontend/src/assets/highLevelDesign.png" alt="Detailed Component Interaction Diagram" width="85%" />
 </div>
 
 ---
@@ -178,3 +178,4 @@ Powered by:
 * ⚡ **Vite**
 
 <div align="center"> <b>Developed with ❤️ by Aradhya</b> </div>
+s
